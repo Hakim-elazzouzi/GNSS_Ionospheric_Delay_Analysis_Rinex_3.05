@@ -82,7 +82,13 @@ observe the same ionospheric layer above Auckland, with similar overall trends.
 
 ```
 project6-ionospheric-delay/
-├── project6_ionospheric_delay.ipynb   ← Main notebook
+├── Outputs/
+│   ├── plot1_gps_L4_timeseries.png
+│   ├── plot2_gps_L4_heatmap.png
+│   ├── plot3_multiconst_L4.png
+│   └── plot4_iono_histogram.png
+├── src/
+│   ├── project6_ionospheric_delay__geometry_free_combination.py    
 ├── requirements.txt                    ← Python dependencies
 ├── LICENSE                             ← MIT License
 └── README.md                           ← This file
