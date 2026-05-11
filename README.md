@@ -88,10 +88,10 @@ project6-ionospheric-delay/
 │   ├── plot3_multiconst_L4.png
 │   └── plot4_iono_histogram.png
 ├── src/
-│   ├── project6_ionospheric_delay__geometry_free_combination.py    
-├── requirements.txt                    ← Python dependencies
-├── LICENSE                             ← MIT License
-└── README.md                           ← This file
+│   ├── project6_ionospheric_delay__geometry_free_combination.py         ← Main python (run this)
+├── requirements.txt                                                     ← Python dependencies
+├── LICENSE                                                              ← MIT License
+└── README.md                                                            ← This file
 ```
 
 ---
