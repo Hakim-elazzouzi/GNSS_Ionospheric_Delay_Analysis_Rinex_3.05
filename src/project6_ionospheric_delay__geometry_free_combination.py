@@ -102,10 +102,6 @@ where α = 40.3 · (1/f₁² − 1/f₂²)  ≈ 1.0 × 10⁻¹⁶ m/TECU
 # Step6: Plot 3: Multi-Constellation L4 Comparison
 # Step7: Plot 4: Ionospheric Delay Histogram
 =============================================================================
-"""
-
-pip install --upgrade georinex
-
 # ─────────────────────────────────────────────────────────────────
 # Step 1 — Install & Import Libraries
 # ─────────────────────────────────────────────────────────────────
