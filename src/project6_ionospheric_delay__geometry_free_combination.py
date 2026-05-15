@@ -1,5 +1,5 @@
 =============================================================================
-🛰️ Project 6 — Ionospheric_Delay:_Geometry-Free_Combination
+Project 6 — Ionospheric_Delay:_Geometry-Free_Combination
 =============================================================================
 -----------------------------------------------------------------------------
  Station  : AUCK00NZL  —  Auckland, New Zealand  (GeoNet / LINZ Network)
