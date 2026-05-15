@@ -1,12 +1,6 @@
 =============================================================================
 🛰️ Project 6 — Ionospheric_Delay:_Geometry-Free_Combination
 =============================================================================
- Author   : Hakim El Azzouzi
- Degree   : MSc Global Navigation Satellite Systems
-            Mohammed First University, Oujda, Morocco
- Email    : elazzouzihakim10@gmail.com
- LinkedIn : https://linkedin.com/in/Hakim-El-Azzouzi
- Location : Luxembourg 🇱🇺
 -----------------------------------------------------------------------------
  Station  : AUCK00NZL  —  Auckland, New Zealand  (GeoNet / LINZ Network)
  File     : AUCK00NZL_R_20260010000_01D_30S_MO.rnx
@@ -17,7 +11,7 @@
 -----------------------------------------------------------------------------
  Description
  -----------
-## 📌 Overview
+## Overview
 
 The ionosphere is a layer of the atmosphere (from ~60 km to ~1000 km altitude)
 where solar radiation ionises gas molecules, creating free electrons.
@@ -33,14 +27,14 @@ This is called the Geometry-Free combination (GF or L4).
 
 | Plot | What It Shows |
 |------|---------------|
-| 📡 **L4 time series** | Ionospheric delay proxy for multiple GPS satellites |
-| 🌡️ **L4 heatmap** | All GPS satellites at once — delay intensity over time |
-| 🌍 **Multi-constellation L4** | GPS, Galileo, GLONASS, BeiDou compared |
-| 📊 **Delay histogram** | Statistical distribution of ionospheric delays |
+| **L4 time series** | Ionospheric delay proxy for multiple GPS satellites |
+| **L4 heatmap** | All GPS satellites at once — delay intensity over time |
+| **Multi-constellation L4** | GPS, Galileo, GLONASS, BeiDou compared |
+| **Delay histogram** | Statistical distribution of ionospheric delays |
 
 ---
 
-## 📐 The Mathematics
+## The Mathematics
 
 ### Carrier-phase observation on L1 and L2 (in metres):
 ```
@@ -82,7 +76,7 @@ where α = 40.3 · (1/f₁² − 1/f₂²)  ≈ 1.0 × 10⁻¹⁶ m/TECU
 1 TECU = 10¹⁶ electrons/m² → ~0.162 m delay on L1
 
 ---
-## 🗂️ RINEX File — Dual-Frequency Observables Available
+## RINEX File — Dual-Frequency Observables Available
 
 | System | L1 carrier | L2 carrier | Notes |
 |--------|-----------|-----------|-------|
@@ -178,7 +172,7 @@ print(f'   L4→STEC factor α  : {ALPHA_GPS:.4f} m/TECU')
 # RINEX FILE PATH HERE
 obs_path = "/AUCK00NZL_R_20260010000_01D_30S_MO.rnx"  # ← change this path
 # Read the file header first (fast — no data loaded yet)
-print("📋 FILE HEADER")
+print(" FILE HEADER")
 print("=" * 60)
 header = gr.rinexheader(obs_path)
 
@@ -189,7 +183,7 @@ print()
 
 # Load all observation data (interval=30 means keep 30-sec rate)
 
-print("⏳ Loading observation data (this may take 1–2 minutes)...")
+print(" Loading observation data (this may take 1–2 minutes)...")
 obs = gr.load(obs_path, interval=30)
 print()
 print("✅ Data loaded!")
@@ -266,7 +260,7 @@ print()
 print('Dual-frequency pairs that will be used:')
 for pfx, (l1, l2, lam1, lam2) in DUAL_FREQ.items():
     avail = l1 in obs.data_vars and l2 in obs.data_vars
-    status = '✅' if avail else '❌  not in file'
+    status = '✅' if avail else 'not in file'
     print(f"  {CONST_NAMES[pfx]:<10} {l1} − {l2}   λ₁={lam1*100:.4f} cm  λ₂={lam2*100:.4f} cm  {status}")
 
 # ─────────────────────────────────────────────────────────
@@ -344,7 +338,7 @@ plt.show()
 
 print('✅ Plot saved: plot1_gps_L4_timeseries.png')
 print()
-print('💡 Interpretation:')
+print('Interpretation:')
 print('   • All curves start at 0 — the constant ambiguity term is removed')
 print('   • Smooth variation = ionospheric delay changing as satellite elevation changes')
 print('   • A sudden large jump = cycle slip (receiver lost phase lock)')
@@ -449,7 +443,7 @@ plt.show()
 
 print('✅ Plot saved: plot2_gps_L4_heatmap.png')
 print()
-print('💡 Interpretation:')
+print(' Interpretation:')
 print('   • Dark grey = satellite below horizon (no tracking)')
 print('   • White/pale = very small ionospheric variation (quiet ionosphere)')
 print('   • Red bands = ionospheric delay increasing during that part of the arc')
@@ -541,7 +535,7 @@ plt.show()
 
 print('✅ Plot saved: plot3_multiconst_L4.png')
 print()
-print('💡 Interpretation:')
+print(' Interpretation:')
 print('   • Different constellations use different frequency pairs — L4 is not identical')
 print('   • But the overall ionospheric variation trend should be similar for all systems')
 print('   • because they all look through the same ionospheric layer above Auckland')
@@ -662,7 +656,7 @@ plt.show()
 
 print('✅ Plot saved: plot4_iono_histogram.png')
 print()
-print(f'📊 ROTI summary:')
+print(f' ROTI summary:')
 print(f'   σ(ΔL4) = {ROTI:.5f} m  per 30-second epoch')
 print(f'   ≈ {ROTI_TECU:.3f} TECU/min')
 if ROTI_TECU < 0.5:
