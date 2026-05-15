@@ -1,10 +1,10 @@
-# 🌐 Project 6 — Ionospheric Delay: Geometry-Free Combination
+# Project 6 — Ionospheric Delay: Geometry-Free Combination
 
 > **L4 = Φ₁ − Φ₂ | Dual-Frequency | ROTI | Multi-Constellation | Auckland, NZ**
 
 ---
 
-## 📌 Overview
+## Overview
 
 The ionosphere introduces a range error of **1 to 50+ metres** depending on solar
 activity, satellite elevation, and geographic location. This project extracts the
@@ -14,14 +14,14 @@ no troposphere model needed.
 
 | Plot | What It Shows |
 |------|---------------|
-| 📡 GPS L4 time series | Ionospheric variation per GPS satellite over 24 hours |
-| 🌡️ GPS L4 heatmap | All GPS satellites — delay direction (red/blue diverging) |
-| 🌍 Multi-constellation L4 | GPS, GLONASS, Galileo, BeiDou, QZSS on the same plot |
-| 📊 ROTI histogram | Ionospheric activity index + per-satellite variability |
+| GPS L4 time series | Ionospheric variation per GPS satellite over 24 hours |
+| GPS L4 heatmap | All GPS satellites — delay direction (red/blue diverging) |
+| Multi-constellation L4 | GPS, GLONASS, Galileo, BeiDou, QZSS on the same plot |
+| ROTI histogram | Ionospheric activity index + per-satellite variability |
 
 ---
 
-## 📐 Key Equations
+## Key Equations
 
 ### Geometry-Free combination:
 ```
@@ -55,7 +55,7 @@ ROTI > 1.0 TECU/min → active / scintillation
 
 ---
 
-## 🖼️ Output Plots
+## Output Plots
 
 ### Plot 1 — GPS L4 Time Series
 All GPS satellites, each detrended at arc start. Smooth curves = calm ionosphere.
@@ -78,7 +78,7 @@ observe the same ionospheric layer above Auckland, with similar overall trends.
 
 ---
 
-## 📂 File Structure
+## File Structure
 
 ```
 project6-ionospheric-delay/
@@ -96,7 +96,7 @@ project6-ionospheric-delay/
 
 ---
 
-## ⚙️ How to Run
+## How to Run
 
 ### 1. Install dependencies
 
@@ -124,7 +124,7 @@ jupyter notebook project6_ionospheric_delay.ipynb
 
 ---
 
-## 🛠️ Dependencies
+## Dependencies
 
 | Package | Purpose |
 |---------|---------|
@@ -136,7 +136,7 @@ jupyter notebook project6_ionospheric_delay.ipynb
 
 ---
 
-## 💡 Why Does the Ionosphere Affect GNSS?
+## Why Does the Ionosphere Affect GNSS?
 
 GNSS signals travel through the ionosphere at ~300 km altitude. Free electrons
 in this layer slow the signal down (code) and speed it up (phase) by the same
@@ -155,7 +155,7 @@ Auckland at ~37°S is a mid-latitude station with a generally **quiet ionosphere
 
 ---
 
-## 👤 Author
+## Author
 
 **Hakim El Azzouzi**  
 MSc Global Navigation Satellite Systems  
@@ -166,13 +166,13 @@ Mohammed First University, Oujda, Morocco
 
 ---
 
-## 📜 License
+## License
 
 MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🔗 Part of the GNSS RINEX Analysis Series
+## Part of the GNSS RINEX Analysis Series
 
 | # | Project |
 |---|---------|
